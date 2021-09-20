@@ -1,0 +1,16 @@
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\bin\Debug\BowlingBall.Tests.dll
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\bin\Debug\BowlingBall.Tests.pdb
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\bin\Debug\BowlingBall.dll
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\bin\Debug\BowlingBall.pdb
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\obj\Debug\BowlingBall.Tests.csprojAssemblyReference.cache
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\obj\Debug\BowlingBall.Tests.csproj.CoreCompileInputs.cache
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\obj\Debug\BowlingBall.Tests.csproj.CopyComplete
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\obj\Debug\BowlingBall.Tests.dll
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\obj\Debug\BowlingBall.Tests.pdb
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
