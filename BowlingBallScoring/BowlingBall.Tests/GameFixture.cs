@@ -18,6 +18,158 @@ namespace BowlingBall.Tests
         }
 
         [TestMethod]
+        public void Test_Roll_With_RandomGame_And_StrikesAndSpare()
+        {
+            //Arrange
+            _game.Roll(10);
+            _game.Roll(9);
+            _game.Roll(1);
+            _game.Roll(5);
+            _game.Roll(5);
+            _game.Roll(7);
+            _game.Roll(2);
+            _game.Roll(10);
+            _game.Roll(10);
+            _game.Roll(10);
+            _game.Roll(9);
+            _game.Roll(0);
+            _game.Roll(8);
+            _game.Roll(2);
+            _game.Roll(9);
+            _game.Roll(1);
+            _game.Roll(10);
+
+            //Act
+            int actualResult = _game.GetScore();
+
+            //Assert
+            Assert.AreEqual(187, actualResult);
+        }
+
+        [TestMethod]
+        public void Test_Roll_With_RandomGame_And_NoExtraRoll()
+        {
+            //Arrange
+            _game.Roll(4); 
+            _game.Roll(3);
+            _game.Roll(8);
+            _game.Roll(2);
+            _game.Roll(10);
+            _game.Roll(1);
+            _game.Roll(7);
+            _game.Roll(5);
+            _game.Roll(2);
+            _game.Roll(5);
+            _game.Roll(3);
+            _game.Roll(8);
+            _game.Roll(2);
+            _game.Roll(8);
+            _game.Roll(2);
+            _game.Roll(10);
+            _game.Roll(9);
+            _game.Roll(0);
+
+            //Act
+            int actualResult = _game.GetScore();
+
+            //Assert
+            Assert.AreEqual(134, actualResult);
+        }
+
+        [TestMethod]
+        public void Test_Roll_With_RandomGame_And_StrikeThenSpareAtEnd()
+        {
+            //Arrange
+            _game.Roll(4);
+            _game.Roll(2);
+            _game.Roll(7);
+            _game.Roll(3);
+            _game.Roll(10);
+            _game.Roll(1);
+            _game.Roll(7);
+            _game.Roll(5);
+            _game.Roll(2);
+            _game.Roll(5);
+            _game.Roll(3);
+            _game.Roll(8);
+            _game.Roll(2);
+            _game.Roll(8);
+            _game.Roll(2);
+            _game.Roll(10);
+            _game.Roll(10);
+            _game.Roll(9);
+            _game.Roll(1);
+
+            //Act
+            int actualResult = _game.GetScore();
+
+            //Assert
+            Assert.AreEqual(154, actualResult);
+        }
+
+        [TestMethod]
+        public void Test_Roll_With_RandomGame_And_SpareThenStrikeAtEnd()
+        {
+            //Arrange
+            _game.Roll(4);
+            _game.Roll(2);
+            _game.Roll(7);
+            _game.Roll(3);
+            _game.Roll(10);
+            _game.Roll(1);
+            _game.Roll(7);
+            _game.Roll(5);
+            _game.Roll(2);
+            _game.Roll(5);
+            _game.Roll(3);
+            _game.Roll(8);
+            _game.Roll(2);
+            _game.Roll(8);
+            _game.Roll(2);
+            _game.Roll(10);
+            _game.Roll(9);
+            _game.Roll(1);
+            _game.Roll(10);
+
+            //Act
+            int actualResult = _game.GetScore();
+
+            //Assert
+            Assert.AreEqual(145, actualResult);
+        }
+
+        [TestMethod]
+        public void Test_Roll_With_RandomGame_And_ThreeStrikesAtEnd()
+        {
+            //Arrange
+            _game.Roll(5);
+            _game.Roll(2);
+            _game.Roll(7);
+            _game.Roll(3);
+            _game.Roll(10);
+            _game.Roll(1);
+            _game.Roll(7);
+            _game.Roll(5);
+            _game.Roll(2);
+            _game.Roll(5);
+            _game.Roll(3);
+            _game.Roll(8);
+            _game.Roll(2);
+            _game.Roll(8);
+            _game.Roll(2);
+            _game.Roll(10);
+            _game.Roll(10);
+            _game.Roll(10);
+            _game.Roll(10);
+           
+            //Act
+            int actualResult = _game.GetScore();
+
+            //Assert
+            Assert.AreEqual(166, actualResult);
+        }
+
+        [TestMethod]
         public void Test_RollBall_With_AllZero()
         {
             //Arrange
@@ -28,7 +180,7 @@ namespace BowlingBall.Tests
 
             //Assert
             Assert.AreEqual(0, actualResult);
-        }       
+        }
 
         [TestMethod]
         public void Test_RollBall_With_AllOne()
@@ -41,38 +193,6 @@ namespace BowlingBall.Tests
 
             //Assert
             Assert.AreEqual(20, actualResult);
-        }
-
-        [TestMethod]
-        public void Test_RollBall_With_OneSpare()
-        {
-            //Arrange
-            _game.Roll(5);
-            _game.Roll(5);
-            _game.Roll(3);
-             RollBall(0, 17);
-
-            //Act
-            int actualResult = _game.GetScore();
-
-            //Assert
-            Assert.AreEqual(16, actualResult);
-        }
-
-        [TestMethod]
-        public void Test_Roll_With_OneStrike()
-        {
-            //Arrange
-            _game.Roll(10);
-            _game.Roll(3);
-            _game.Roll(4);
-            RollBall(0, 17);
-
-            //Act
-            int actualResult = _game.GetScore();
-
-            //Assert
-            Assert.AreEqual(24, actualResult);
         }
 
         [TestMethod]
@@ -89,44 +209,37 @@ namespace BowlingBall.Tests
         }
 
         [TestMethod]
-        public void Test_Roll_With_RandomGame_And_NoExtraRoll()
+        public void Test_RollBall_With_OneSpare()
         {
             //Arrange
-            _game.Roll(new int[] { 4, 3, 8, 2, 10, 1, 7, 5, 2, 5, 3, 8, 2, 8, 2, 10, 9, 0 });
+            _game.Roll(5);
+            _game.Roll(5);
+            _game.Roll(3);
+            RollBall(1, 17);
 
             //Act
             int actualResult = _game.GetScore();
 
             //Assert
-            Assert.AreEqual(134, actualResult);
+            Assert.AreEqual(33, actualResult);
         }
 
         [TestMethod]
-        public void Test_Roll_With_RandomGame_And_SpareThenStrikeAtEnd()
+        public void Test_Roll_With_OneStrike()
         {
             //Arrange
-            _game.Roll(new int[] { 4, 2, 7, 3, 10, 1, 7, 5, 2, 5, 3, 8, 2, 8, 2, 10, 9, 1, 10 });
+            _game.Roll(10);
+            _game.Roll(3);
+            _game.Roll(4);
+             RollBall(0, 16);
 
             //Act
             int actualResult = _game.GetScore();
 
             //Assert
-            Assert.AreEqual(145, actualResult);
+            Assert.AreEqual(24, actualResult);
         }
-
-        [TestMethod]
-        public void Test_Roll_With_RandomGame_And_ThreeStrikesAtEnd()
-        {
-            //Arrange
-            _game.Roll(new int[] { 5, 2, 7, 3, 10, 1, 7, 5, 2, 5, 3, 8, 2, 8, 2, 10, 10, 10, 10 });
-
-            //Act
-            int actualResult = _game.GetScore();
-
-            //Assert
-            Assert.AreEqual(166, actualResult);
-        }
-
+        
         private void RollBall(int pins, int times)
         {
             for (int i = 0; i < times; i++)

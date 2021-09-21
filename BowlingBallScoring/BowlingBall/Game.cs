@@ -20,20 +20,12 @@ namespace BowlingBall
     {
         private int[] _rolls = new int[21];
         private int[] _frame = new int[10];
-        int currentRoll = 0;
+        private int _currentRoll = 0;
 
         public void Roll(int pins)
         {
-            _rolls[currentRoll++] = pins;
-        }
-
-        public void Roll(int[] pins)
-        {
-            for (int i = 0; i < pins.Length; i++)
-            {
-                _rolls[currentRoll++] = pins[i];
-            }
-        }
+            _rolls[_currentRoll++] = pins;
+        }     
 
         public int GetScore()
         {
@@ -41,46 +33,46 @@ namespace BowlingBall
             int index = 0;
             for (int frame = 0; frame < 10; frame++)
             {
-                if (isStrike(index))
+                if (VerifyStrike(index))
                 {
-                    score += GetStrikeScore(index);
+                    score += CalculateStrikeScore(index);
                     index++;
                 }
-                else if (isSpare(index))
+                else if (VerifySpare(index))
                 {
-                    score += GetSpareScore(index);
+                    score += CalculateSpareScore(index);
                     index += 2;
                 }
                 else
                 {
-                    score += GetStandardScore(index);
+                    score += CalculateStandardScore(index);
                     index += 2;
                 }
             }
             return score;
         }
 
-        private bool isStrike(int frameIndex)
+        private bool VerifyStrike(int frameIndex)
         {
             return _rolls[frameIndex] == 10;
         }
 
-        private bool isSpare(int frameIndex)
+        private bool VerifySpare(int frameIndex)
         {
             return _rolls[frameIndex] + _rolls[frameIndex + 1] == 10;
         }
 
-        private int GetStrikeScore(int index)
+        private int CalculateStrikeScore(int index)
         {
             return 10 + _rolls[index + 1] + _rolls[index + 2];           
         }
 
-        private int GetSpareScore(int index)
+        private int CalculateSpareScore(int index)
         {
             return 10 + _rolls[index + 2];
         }
 
-        private int GetStandardScore(int index)
+        private int CalculateStandardScore(int index)
         {
             return _rolls[index] + _rolls[index + 1];
         }

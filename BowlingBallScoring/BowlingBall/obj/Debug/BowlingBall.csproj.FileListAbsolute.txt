@@ -4,3 +4,9 @@ C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall\obj\Debug\BowlingBall.c
 C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall\obj\Debug\BowlingBall.csproj.CoreCompileInputs.cache
 C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall\obj\Debug\BowlingBall.dll
 C:\TFS\code-starter-kits-master\bowling-ball\BowlingBall\obj\Debug\BowlingBall.pdb
+C:\Tavisca\BowlingBallScoring\BowlingBall\bin\Debug\BowlingBall.dll
+C:\Tavisca\BowlingBallScoring\BowlingBall\bin\Debug\BowlingBall.pdb
+C:\Tavisca\BowlingBallScoring\BowlingBall\obj\Debug\BowlingBall.csprojAssemblyReference.cache
+C:\Tavisca\BowlingBallScoring\BowlingBall\obj\Debug\BowlingBall.csproj.CoreCompileInputs.cache
+C:\Tavisca\BowlingBallScoring\BowlingBall\obj\Debug\BowlingBall.dll
+C:\Tavisca\BowlingBallScoring\BowlingBall\obj\Debug\BowlingBall.pdb
